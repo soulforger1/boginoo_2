@@ -1,8 +1,17 @@
 import React from 'react'
 import {Button} from '../components'
+import { useHistory } from "react-router-dom";
 import {Logo} from '../assets/logo'
 
-const navigation = ({children}) => {
+const Navigation = ({children}) => {
+    const history = useHistory();
+    const pushLogin = () => {
+        history.push('/signIn')
+    }
+    const pushSignUp = () => {
+        history.push('/signUp')
+    }
+
     return (
         <div>
             <div className='pa-3 ph-10 flex items-center justify-between'>
@@ -11,7 +20,7 @@ const navigation = ({children}) => {
                 </div>
                 <div>
                     <Button className='font-roboto w-8 h-4 br-r-4 b-default c-primary rb outline' value="Log in" />
-                    <Button className='font-roboto w-8 h-4 br-r-27 b-primary c-secondary rb outline' value="Sign Up"/>
+                    <Button className='font-roboto w-8 h-4 br-r-27 b-primary c-secondary rb outline' value="Sign Up" onClick={() => pushSignUp()}/>
                 </div>
             </div>
 
@@ -22,4 +31,4 @@ const navigation = ({children}) => {
     )
 }
 
-export default navigation;
+export default Navigation;
