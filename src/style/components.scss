@@ -8,11 +8,25 @@
     эдгээр property-ийг судлаарай
 */
 
+// .btn {
+//     border-radius: 100px;
+//     text-transform: uppercase;
+//     text-decoration: none;
+//     outline: none !important;
+// }
+
 .btn {
-    border-radius: 100px;
-    text-transform: uppercase;
-    text-decoration: none;
     outline: none !important;
+    text-decoration: none;
+    border-color: none;
+    cursor: pointer;
+}
+
+
+.signUpBorder {
+    height: 2px;
+    width: 373px;
+    border-radius: 33px;
 }
 
 .disabled {
@@ -22,6 +36,5 @@
 }
 
 .input {
-    border-radius: 100px;
     outline: none;
 }

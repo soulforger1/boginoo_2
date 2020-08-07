@@ -4,6 +4,8 @@ import '../style/flex.scss';
 import '../style/main.scss';
 import '../style/typograph.scss';
 import '../style/variables.scss'
+import { Input } from '../components';
+import { Link } from 'react-router-dom';
 
 export const SignUp = () => {
 
@@ -16,9 +18,20 @@ export const SignUp = () => {
                 <path d="M20 17.7856H20.8049C23.014 17.7856 24.8049 19.5765 24.8049 21.7856V28.956C24.8049 31.1651 23.014 32.956 20.8049 32.956H19.1951C16.986 32.956 15.1951 31.1651 15.1951 28.956V25.3708" stroke="#1C4EFF" stroke-width="2" stroke-linecap="round" />
                 <path d="M20.0001 22.2144H19.1952C16.986 22.2144 15.1952 20.4236 15.1952 18.2144L15.1952 11.044C15.1952 8.83489 16.986 7.04403 19.1952 7.04403H20.8049C23.0141 7.04403 24.8049 8.83489 24.8049 11.044V14.6292" stroke="#1C4EFF" stroke-width="2" stroke-linecap="round" />
             </svg> */}
-            <div className="vh100 flex-center text-center pa-14">
-                <div className=" w-423 h-412">
-                    <div>Sign up to Shorten</div>
+            <div className="vh100 flex-center pa-14">
+                <div className=" w-423 h-412 flex flex-col font-roboto">
+                    <div className="fs-36 lh-24 mauto ">Sign up to Shorten</div>
+                    <div className="fs-16 lh-24 mt-6">Email</div>
+                    <Input className="rb h-4  w-37 outlineNone" />
+                    <div className="signUpBorder mb-3 b-gray"></div>
+                    <div className="fs-16 lh-24">Password</div>
+                    <Input className="rb h-4 w-37 outlineNone" />
+                    <div className="signUpBorder mb-4 b-gray"></div>
+                    <div className="w-17 h-4 br-r-32 mauto c-default flex items-center justify-center b-primary btn">Create Account</div>
+                    <div className="flex flex-row mauto">
+                        <div className="mt-3">Already have an account? </div>
+                        <Link className="mt-3">Log in</Link>
+                    </div>
                 </div>
             </div>
         </div>

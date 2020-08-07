@@ -95,6 +95,13 @@ body {
 .rm {
     margin: 0;
 }
+.mauto {
+    margin: auto;
+}
+
+.outlineNone{
+    outline: none;
+}
 
 .pr {
     position: relative;
@@ -105,6 +112,7 @@ body {
     right: 130px;
     border-top: none;
 }
+
 @for $i from 1 to 100 {
     .bb-#{$i} {
         border-bottom: solid grey $i + px;
