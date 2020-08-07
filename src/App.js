@@ -9,16 +9,18 @@ import HomeDefault from './pages/home-default'
 const App = () => {
 
   return (
-    <Router>
-      <Switch>
-        <Route path="/signUp">
-          <SignUp />
-        </Route>
-        <Route to='/home-default'>
-          <HomeDefault/>
-        </Route>
-      </Switch>
-    </Router>
+    <Provider>
+      <Router>
+        <Switch>
+          <Route path="/signUp">
+            <SignUp />
+          </Route>
+          <Route path='/' exact>
+            <HomeDefault />
+          </Route>
+        </Switch>
+      </Router>
+    </Provider>
   );
 }
 

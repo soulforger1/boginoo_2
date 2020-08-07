@@ -5,10 +5,9 @@ import { Input, Button } from '../components'
 const HomeDefault = () => {
 
     const [inputUrl, setInputUrl] = useState('');
+    const button = document.getElementById('home_page_button');
+    if (button != null) button.style.opacity = inputUrl !== '' ? '1' : '0.5';
 
-    if (inputUrl !== '') {
-        
-    }
 
     return (
         <Navigation>
@@ -18,7 +17,8 @@ const HomeDefault = () => {
 
             <div className='flex justify-center'>
                 <Input className='w-67 h-4 br-r-25 shadow rb outline' onChange={(e) => setInputUrl(e.target.value)} placeholder='Enter the link here' />
-                <Button className='op w-15 h-4 br-r-35 b-lightblue rb c-default outline' disabled='disabled' value='Shorten URL' />
+                {/* {inputUrl !== '' ? return } */}
+                <Button className='op w-15 h-4 br-r-35 b-lightblue rb c-default outline' id='home_page_button' disabled='disabled' value='Shorten URL' />
             </div>
         </Navigation>
     )
