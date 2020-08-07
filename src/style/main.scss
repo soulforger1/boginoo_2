@@ -91,8 +91,8 @@ body {
 }
 
 .logo {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 40px;
 }
 
 .op {
@@ -169,3 +169,10 @@ body {
     visibility: visible;
     opacity: 1;
   }
+
+
+@for $i from 1 through 100 {
+    .br-r-#{$i} {
+        border-radius: $i + px;
+    }
+}
