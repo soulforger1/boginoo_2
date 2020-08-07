@@ -1,20 +1,20 @@
 import React from 'react';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import './style/main.scss'
+import { Provider } from './context/context';
 
-function App() {
+
+const App = () => {
+
   return (
-    <Router>
-      <Switch>
-        
-      </Switch>
-    </Router>
+    <Provider>
+      <Router>
+        <Switch>
+
+        </Switch>
+      </Router>
+    </Provider>
   );
 }
 
-export default App;
+export default App; 
