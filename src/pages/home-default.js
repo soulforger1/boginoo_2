@@ -1,11 +1,17 @@
 import React from 'react'
-import Navigation from '../components/navigation'
+import Navigation from '../components/navigation';
+import {Input, Button} from '../components'
 
 const homeDefault = () => {
     return (
         <Navigation>
+            <div className='flex-center h60'>
+                <h1 className='font-roboto fs-52 c-primary'>Simplify your links in one click.</h1>
+            </div>
+
             <div>
-                Simplify your links in one click.
+                <Input className='w-82 h-4' />
+                <Button className='' value='Shorten URL' />
             </div>
         </Navigation>
     )

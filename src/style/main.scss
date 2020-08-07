@@ -27,31 +27,31 @@
     }
 }
 
-@for $i from 1 through 600 {
+@for $i from 1 through 100 {
     .h-#{$i} {
-        height:  $i + px;
+        height:  $i * 10 + px;
     }
     .w-#{$i} {
-        width:  $i + px;
+        width:  $i * 10 + px;
     }
     .pa-#{$i} {
-        padding:  $i + px;
+        padding:  $i * 10 + px;
     }
     .ph-#{$i} {
-        padding-left:  $i + px;
-        padding-right:  $i + px;
+        padding-left:  $i * 10 + px;
+        padding-right:  $i * 10 + px;
     }
     .ma-#{$i} {
-        margin:  $i + px;
+        margin:  $i * 10 + px;
     }
     .mt-#{$i} {
-        margin-top:  $i + px;
+        margin-top:  $i * 10 + px;
     }
     .ml-#{$i} {
-        margin-left:  $i + px;
+        margin-left:  $i * 10 + px;
     }
     .mb-#{$i} {
-        margin-bottom: $i + px;
+        margin-bottom: $i * 10 + px;
     }
 }
 
@@ -59,13 +59,6 @@ body {
     margin: 0;
 }
 
-.w100 {
-    width: 100%;
-}
-
-.h100 {
-    height: 100%;
-}
 
 
 // ЭНЭ CSS ЯМАР УЧИРТАЙГ САЙН СУДЛАХ
@@ -120,6 +113,13 @@ body {
     }
     .bright-#{$i} {
         border-right: solid black $i + px;
+    }
+    .w#{$i} {
+        width: $i + vw;
+    }
+    
+    .h#{$i} {
+        height: $i + vh;
     }
 }
 

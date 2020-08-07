@@ -392,6 +392,10 @@
     font-family: Lobster;
 }
 
+.font-roboto {
+    font-family: 'Roboto', sans-serif;
+}
+
 .font-ubuntu {
     font-family: Ubuntu;
 }
@@ -412,7 +416,7 @@
         className='fs-16 lh-20'
 */
 
-@for $i from 12 to 80 {
+@for $i from 12 to 100 {
     .fs-#{$i} {
         font-size: $i + px;
     }
