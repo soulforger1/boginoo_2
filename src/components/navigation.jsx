@@ -1,9 +1,10 @@
 import React from 'react'
+import {Button} from '../components'
 
 const navigation = ({children}) => {
     return (
         <div>
-            <div className='pa-30 ph-100 flex items-center justify-between'>
+            <div className='pa-3 ph-10 flex items-center justify-between'>
                 <div className='logo'>
                     <svg width="150" height="40" viewBox="0 0 150 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect width="150" height="40" fill="white"/>
@@ -13,8 +14,8 @@ const navigation = ({children}) => {
                     </svg>
                 </div>
                 <div>
-                    <button className='w-77 h-40 br-r-4 b-default c-primary rb'>Log in</button>
-                    <button className='w-85 h-40 br-r-27 b-primary c-secondary rb'>Sign Up</button>
+                    <Button className='font-roboto w-8 h-4 br-r-4 b-default c-primary rb' value="Log in" />
+                    <Button className='font-roboto w-8 h-4 br-r-27 b-primary c-secondary rb' value="Sign Up"/>
                 </div>
             </div>
 
