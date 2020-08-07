@@ -1,8 +1,16 @@
 const functions = require('firebase-functions');
+const admin = require('firebase-admin');
 
-// // Create and Deploy Your First Cloud Functions
-// // https://firebase.google.com/docs/functions/write-firebase-functions
-//
-// exports.helloWorld = functions.https.onRequest((request, response) => {
-//  response.send("Hello from Firebase!");
-// });
+admin.initializeApp();
+
+const db = admin.firestore();
+// const auth
+
+exports.sendWelcomeEmail = functions.auth.user().onCreate(async (user) => {
+    const userName = user.email.split('@')[0];
+    console.log(user)
+    const uid = user.uid;
+
+    await db.doc(`users/${uid}`).set({ userName });
+    await db.doc(`users/${uid}/history/0`).set({ hi: 'none' });
+});
