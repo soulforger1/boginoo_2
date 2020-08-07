@@ -2,18 +2,19 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import './style/main.scss'
 import { Provider } from './context/context';
+import { SignUp } from './pages/signUp';
 
 
 const App = () => {
 
   return (
-    <Provider>
-      <Router>
-        <Switch>
-
-        </Switch>
-      </Router>
-    </Provider>
+    <Router>
+      <Switch>
+        <Route path="/signUp">
+          <SignUp />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 
