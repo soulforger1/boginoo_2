@@ -1,12 +1,16 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Navigation from '../components/navigation';
 import { Input, Button } from '../components'
 
 const HomeDefault = () => {
+    window.onload = () => document.getElementById('home_page_button').disabled = true;
 
     const [inputUrl, setInputUrl] = useState('');
     const button = document.getElementById('home_page_button');
+
     if (button != null) button.style.opacity = inputUrl !== '' ? '1' : '0.5';
+    if (button != null) button.disabled = inputUrl !== '' ? false : true;
+
 
 
     return (
@@ -17,8 +21,7 @@ const HomeDefault = () => {
 
             <div className='flex justify-center'>
                 <Input className='w-67 h-4 br-r-25 shadow rb outline' onChange={(e) => setInputUrl(e.target.value)} placeholder='Enter the link here' />
-                {/* {inputUrl !== '' ? return } */}
-                <Button className='op w-15 h-4 br-r-35 b-lightblue rb c-default outline' id='home_page_button' disabled='disabled' value='Shorten URL' />
+                <Button className='op w-15 h-4 br-r-35 b-lightblue rb c-default outline' id='home_page_button' value='Shorten URL' onClick={() => alert('wtf')} />
             </div>
         </Navigation>
     )
