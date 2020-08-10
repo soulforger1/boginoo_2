@@ -9,7 +9,5 @@ deploy:
     - echo "---installing node modules"
     - npm install
     - echo "---install done"
-    - echo "---firebase login"
-    - firebase login
     - echo "---deploy starting"
-    - firebase deploy
+    - firebase deploy --token "1//0epcFg683HJPgCgYIARAAGA4SNwF-L9IrqYkAcN6lSSug046OMKNx3K5FkBeHpbLuhMpXqGiYDeg20o3ZeJXf5M8N2ZWBVYTvyfI"
