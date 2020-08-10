@@ -17,7 +17,7 @@ const Navigation = ({children}) => {
         history.push('/')
     }
 
-    if(history.location.pathname == '/signUp' || history.location.pathname == '/signIn') {
+    if(history.location.pathname === '/signUp' || history.location.pathname === '/signIn') {
         return (
             <div>
                 <div className='pa-3 ph-10 flex items-center justify-between'>
