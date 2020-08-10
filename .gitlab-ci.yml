@@ -9,5 +9,7 @@ deploy:
     - echo "installing node modules"
     - yarn install
     - echo "install done"
+    - echo "firebase login"
+    - firebase login:ci
     - echo "deploy starting"
     - firebase deploy
