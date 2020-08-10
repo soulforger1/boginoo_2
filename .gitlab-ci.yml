@@ -6,10 +6,10 @@ before_script:
 deploy:
   stage: deploy
   script:
-    - echo "installing node modules"
-    - yarn install
-    - echo "install done"
-    - echo "firebase login"
-    - firebase login:ci
-    - echo "deploy starting"
+    - echo "---installing node modules"
+    - npm install
+    - echo "---install done"
+    - echo "---firebase login"
+    - firebase login
+    - echo "---deploy starting"
     - firebase deploy
