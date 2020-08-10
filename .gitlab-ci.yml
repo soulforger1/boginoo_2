@@ -8,6 +8,9 @@ deploy:
   script:
     - echo "---installing node modules"
     - npm install
+    - cd functions
+    - npm install
+    - cd ..
     - echo "---install done"
     - echo "building"
     - npm run build
