@@ -12,8 +12,11 @@ const App = () => {
     <Provider>
       <Router>
         <Switch>
-          <Route to='/home-default'>
+          <Route path='/' exact>
             <HomeDefault />
+          </Route>
+          <Route path="/signUp">
+            <SignUp />
           </Route>
         </Switch>
       </Router>
